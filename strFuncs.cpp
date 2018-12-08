@@ -24,14 +24,19 @@ bool isAnagram(string s1, string s2){
 		  {
 			  s1.erase(i, 1);
 			  s2.erase(j, 2);
+			  break;
 		  }
 		  if (s2 == "")
 		  {
 			  return true;
 		  }
+		  if(j >= s2.length() - 1)
+		  {
+			  return false;
+		  }
 	  }
-	  return false;
   }
+  return true;
 }
 
 /* Precondition: s1 is a valid string that may contain upper or lower case alphabets, no spaces or special characters
