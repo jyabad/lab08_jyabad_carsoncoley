@@ -12,7 +12,26 @@ using namespace std;
  * affect your result. 
  */
 bool isAnagram(string s1, string s2){
-  return true;
+  if(s1.length() != s2.length())
+  {
+	  return false;
+  }
+  for (int i = 0; i < s1.length; i++;)
+  {
+	  for (int i = 0; i < s1.length; i++)
+	  {
+		  if (s1.at(i) == s2.at(j))
+		  {
+			  s1.erase(i, 1);
+			  s2.erase(j, 2);
+		  }
+		  if (s2 == "")
+		  {
+			  return true;
+		  }
+	  }
+	  return false;
+  }
 }
 
 /* Precondition: s1 is a valid string that may contain upper or lower case alphabets, no spaces or special characters
