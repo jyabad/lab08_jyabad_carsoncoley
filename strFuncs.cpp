@@ -18,11 +18,10 @@ bool isAnagram(string s1, string s2){
   }
   for (int i = 0; i < s1.length; i++;)
   {
-	  for (int i = 0; i < s1.length; i++)
+	  for (int j = 0; j < s1.length; i++)
 	  {
 		  if (s1.at(i) == s2.at(j))
 		  {
-			  s1.erase(i, 1);
 			  s2.erase(j, 2);
 			  break;
 		  }
